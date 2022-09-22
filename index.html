@@ -154,17 +154,23 @@
     <!--akhir projects-->
 
     <!-- Gallery-->
-<section id="gallery">
+ <!--<section id="gallery">
   <div class="container">
     <div class="row text-center mb-3 ">
       <div class="col">
         <h2> Gallery  </h2>
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <a href="#">
+        <img src="" alt="">
+      </a>
+    </div>
   </div>
 </section>
 
-    <!-- akhir gallery-->
+    <!- akhir gallery-->
     <!-- Contact-->
     <section id="contact">
       <div class="container">
@@ -222,10 +228,16 @@
       AOS.init({
         once: true,
       });
+      
     </script>
-
-
-    <script>
+<!-- awal gsap-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+      <script>
+        gsap.from('.jumbotron img' , { duration: 1, rotateY: 360, opacity:0});
+        gsap.from('.navbar' , { duration: 1.5, y: '-100%', opacity:0, ease:'bounce'});
+      </script>
+<!-- akhir gsap-->
+     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbyDQaBwQQYXJHBwruo65olGnDkZ7KXGWGtipX2F7gc9kWsvdJDeUGQLwsOIq5gham9N/exec'
       const form = document.forms['contact'];
 
@@ -254,6 +266,6 @@
           })
           .catch(error => console.error('Error!', error.message))
       })
-    </script
+    </script>
   </body>
 </html>
